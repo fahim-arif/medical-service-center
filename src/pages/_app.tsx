@@ -1,9 +1,15 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import "@fontsource/asap";
 
-function MyApp({ Component, pageProps }) {
+import type {AppProps} from 'next/app';
+import '@public/styles/globals.css';
+import {ChakraProvider, CSSReset} from '@chakra-ui/react';
+import theme from '@root/common/theme';
+import '@fontsource/asap';
+
+function MyApp({Component, pageProps}: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+
       <Component {...pageProps} />
     </ChakraProvider>
   );
