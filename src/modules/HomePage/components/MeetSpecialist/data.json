@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "specialist": "Cardiologist",
+    "image": "/images/doctor.png"
+  },
+  {
+    "id": 2,
+    "name": "John Doel",
+    "specialist": "Cardiologist",
+    "image": "/images/doctor.png"
+  }
+]
