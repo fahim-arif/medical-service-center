@@ -30,7 +30,7 @@ const PaitentReview = () => {
         marginTop="66px"
       >
         {reviewData.map((data) => (
-          <Box bgColor="#FFFFFF">
+          <Box key={data.id} bgColor="#FFFFFF">
             <Flex >
               <Box width="75px" height="73px">
               <Image src={data.image} width="100%" height="100%"></Image>

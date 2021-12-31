@@ -12,7 +12,7 @@ const BestSeller = () => {
       <Box marginTop="166px">
         <Flex justifyContent="center">
           <Text fontSize="48px" fontFamily="Asap" fontWeight="600">
-            Meet Our Specialist
+            Best Seller
           </Text>
         </Flex>
         <Flex justifyContent="center">
@@ -31,7 +31,7 @@ const BestSeller = () => {
         marginTop="66px"
       >
         {bestSellerData.map((data) => (
-          <Box>
+          <Box key={data.id}>
             <Image src={data.image} width="260px" height="226px"></Image>
             <Box>
               <Flex>

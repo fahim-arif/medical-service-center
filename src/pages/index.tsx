@@ -12,6 +12,7 @@ import BestSeller from "../modules/HomePage/components/BestSeller"
 import Emergency from "../modules/HomePage/components/Emergency"
 import PatientReview from "../modules/HomePage/components/PaitentReview"
 import Partner from "../modules/HomePage/components/Partner"
+import Footer from "../modules/HomePage/components/Footer";
 
 
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Emergency />
       <PatientReview />
       <Partner />
+      <Footer />
      
       
     </Box>

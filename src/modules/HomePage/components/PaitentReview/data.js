@@ -8,7 +8,7 @@ export const data = [
     image: '/images/review1.png',
   },
   {
-    id: 1,
+    id: 2,
     name: 'John Doe',
     review:
       'They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.',

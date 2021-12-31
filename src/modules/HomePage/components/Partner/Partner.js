@@ -22,7 +22,7 @@ const Partner = () => {
       <Box width="85%" mx="auto">
         <SimpleGrid columns={5} spacingX="20px" marginTop="66px">
           {partnerData.map((partner) => (
-            <Box width="224px" height="68px">
+            <Box width="224px" height="68px" key={partner.id}>
               <Image src={partner.image} width="224px" height="68px"></Image>
             </Box>
           ))}

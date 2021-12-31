@@ -28,7 +28,7 @@ const SpecialistDoctor = ({posts}) => {
       </Box>
       <SimpleGrid columns={4} spacingX="84px" spacingY="20px" width="85%" mx="auto" marginTop="66px">
         {jsonData.map((data) => (
-          <Box>
+          <Box key={data.id}>
             <Image src={data.image} width="260px" height="226px"></Image>
             <Box>
               <Flex justifyContent="center">

@@ -8,7 +8,7 @@ export const bestSeller = [
     image: '/images/bestSeller1.png',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Mega Activ',
     rating: 5,
     totalRating: 28,
@@ -16,7 +16,7 @@ export const bestSeller = [
     image: '/images/bestSeller2.png',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Lactoo Calamine',
     rating: 4,
     totalRating: 102,
@@ -24,7 +24,7 @@ export const bestSeller = [
     image: '/images/bestSeller3.png',
   },
   {
-    id: 1,
+    id: 4,
     name: 'Omron Temperature meter',
     rating: 4,
     totalRating: 15,
