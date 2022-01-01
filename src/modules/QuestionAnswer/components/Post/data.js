@@ -1,0 +1,12 @@
+export const data = [
+    {
+        id:1,
+        heading: 'Therapy is really helpful for back pain?',
+        user: 'By Jenifer Lofez / 25 August 2020.',
+        post2: 'It is a long established fact that a reader will be distracted by the readable cont ent of a page when looking at its layout. The point of usingoreIpsum is that it has a more-or-less normal distribution of letters, as opposedto using Content here, content here, making. It is a long establishefact that a reader will be distracted by the its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,as opposed to using Content here, content here, making. It is a long established fact that a reader will be distracted by the readable cont ent of a page when looking at its layout. The point of usingoreIpsum is that it has a more-or-less normal distribution of letters, as opposedto using Content here, content here, making. It is a long establishefact that a reader will be distracted by the its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,as opposed to using Content here, content here, making.It is a long established fact that a reader will be distracted by the readable cont ent of a page when looking at its layout. The point of usingoreIpsum is that it has a more-or-less normal distribution of letters, as opposedto using Content here, content here, making. It is a long establishefact that a reader will be distracted by the its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,as opposed to using Content here, content here, making.It is a long established fact that a reader will be distracted by the readable cont ent of a page when looking at its layout. The point of usingoreIpsum is that it has a more-or-less normal distribution of letters, as opposedto using Content here, content here, making. It is a long establishefact that a reader will be distracted by the its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,as opposed to using Content here, content here, making.',
+
+        tags: "Tags: Medical, Doctors, Theraphi",
+        share: "Share: Facebook, Twitter, Skype"
+
+    }
+]
