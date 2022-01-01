@@ -1,5 +1,22 @@
-import {Box, SimpleGrid, Flex, Text, Button} from '@chakra-ui/react';
+import {
+  Box,
+  SimpleGrid,
+  Flex,
+  Text,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react';
+
+import {useDisclosure} from '@chakra-ui/react';
 export default function AppoinmentTime() {
+  const {isOpen, onOpen, onClose} = useDisclosure();
+
   return (
     <Box width="60%" mx="auto">
       <Flex justifyContent="center">
@@ -92,16 +109,36 @@ export default function AppoinmentTime() {
             </Button>
           </SimpleGrid>
 
+
           <Button
-          marginTop="40px"
-              height="60px"
-              width="335px"
-              colorScheme="teal"
-              bg="#504DE5"
-              size="lg"
-            >
-             Confirm
-            </Button>
+            marginTop="40px"
+            height="40px"
+            width="335px"
+            colorScheme="teal"
+            bg="#504DE5"
+            size="lg"
+            onClick={onOpen}
+          >
+            Confirm
+          </Button>
+
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Thank you!!</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                Thank you for the appoinment! Hopefully we can provide a great
+                service to you!
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </Box>
       </Flex>
     </Box>
