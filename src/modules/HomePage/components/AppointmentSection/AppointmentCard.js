@@ -1,5 +1,6 @@
-import { Box, Text, Flex, Button } from "@chakra-ui/react";
+import {Box, Text, Flex, Button} from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import plus from "/public/images/plus.png";
 
@@ -60,7 +61,11 @@ const AppointmentCard = () => {
             background="#223A66"
             color=" rgba(255, 255, 255, 1)"
           >
-            Make A Appointment
+            <Link href='/appointment'>
+
+              Make A Appointment
+            </Link>
+
           </Button>
         </Box>
       </Box>

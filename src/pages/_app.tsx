@@ -9,7 +9,6 @@ function MyApp({Component, pageProps}: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
-
       <Component {...pageProps} />
     </ChakraProvider>
   );

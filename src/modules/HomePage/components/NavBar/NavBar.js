@@ -1,4 +1,4 @@
-import { Flex, Text, Box } from "@chakra-ui/react";
+import {Flex, Text, Box} from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,11 +15,16 @@ const NavBar = () => {
         alignItems="center"
       >
         <Box height="48px" width="188px">
-          <Image src={logo} layout="responsive" />
+          <Link href='/'>
+            <a>
+
+              <Image src={logo} layout="responsive" />
+            </a>
+          </Link>
         </Box>
         <Flex width="1100px" justifyContent="right" alignItems="center">
           <Box marginLeft="20px">
-            <Link href="#">
+            <Link href="/">
               <Text
                 cursor="pointer"
                 fontSize="14px"
@@ -31,14 +36,14 @@ const NavBar = () => {
             </Link>
           </Box>
           <Box marginLeft="20px">
-            <Link href="#">
+            <Link href="questionAnswer">
               <Text
                 cursor="pointer"
                 fontSize="14px"
                 fontWeight="500"
                 fontFamily="Asap"
               >
-                Medical Service
+                Q/A
               </Text>
             </Link>
           </Box>
@@ -67,7 +72,7 @@ const NavBar = () => {
             </Link>
           </Box>
           <Box marginLeft="20px">
-            <Link href="#">
+            <Link href="/about">
               <Text
                 cursor="pointer"
                 fontSize="14px"
@@ -82,14 +87,14 @@ const NavBar = () => {
             <Box height="30px" width="36px">
               <Image src={profilePic} layout="responsive" />
             </Box>
-            <Link href="#">
+            <Link href="/doctorProfile">
               <Text
                 cursor="pointer"
                 fontSize="14px"
                 fontWeight="500"
                 fontFamily="Asap"
               >
-                Welcome Moin
+                Welcome
               </Text>
             </Link>
           </Flex>

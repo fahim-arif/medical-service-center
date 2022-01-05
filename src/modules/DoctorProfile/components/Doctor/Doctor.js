@@ -47,7 +47,7 @@ export default function Doctor() {
             color="white"
             paddingX="50px"
           >
-            <Link href="/appoinment" paddingY="15px">
+            <Link href="/appointment" paddingY="15px">
               Book An Appoinment
             </Link>
           </Button>

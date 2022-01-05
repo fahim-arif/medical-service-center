@@ -1,9 +1,10 @@
 import { Box } from "@chakra-ui/react"
+import Layout from '../common/components/elements/Layout'
 import Doctor from "../modules/DoctorProfile/components/Doctor"
 export default function DoctorProfile(){
     return(
-        <Box>
+        <Layout>
         <Doctor></Doctor>
-        </Box>
+        </Layout>
     )
 }

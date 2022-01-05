@@ -14,8 +14,6 @@ import PatientReview from "../modules/HomePage/components/PaitentReview"
 import Partner from "../modules/HomePage/components/Partner"
 import Footer from "../modules/HomePage/components/Footer";
 
-
-
 export default function Home() {
   return (
     <Box>
@@ -35,8 +33,6 @@ export default function Home() {
       <PatientReview />
       <Partner />
       <Footer />
-     
-      
     </Box>
   );
 }
