@@ -11,7 +11,7 @@ const Emergency = () => {
         </Flex>
         <Flex justifyContent="center">
           <Text fontSize="18px" fontFamily="Asap" fontWeight="600">
-          The hospital plays a statewide role in rehabilitation services, which includes the Acquired
+            The hospital plays a statewide role in rehabilitation services, which includes the Acquired
           </Text>
         </Flex>
       </Box>
@@ -21,9 +21,11 @@ const Emergency = () => {
         width="100%"
         height="444px"
         bgImage="url('/images/emergency.png')"
+        backgroundPosition='cover'
+      // backgroundRepeat='no-repeat'
       >
         <Box
-          width="395px"
+          width="410px"
           height="444px"
           backgroundColor="#5481F5"
           ml="115px"
@@ -31,44 +33,41 @@ const Emergency = () => {
           fontFamily="Asap"
         >
           <Flex justifyContent="center" alignItems="center">
-            <SimpleGrid columns={1} spacingY="20px">
-              <Flex justifyContent="center" alignItems="center">
+            <SimpleGrid pl={10} columns={1} spacingY="20px">
+              <Flex>
                 <Text fontWeight="600" fontSize="28px">
                   Emegency Cases
                 </Text>
               </Flex>
-              <Flex justifyContent="center" alignItems="center" px="10px">
-                <Text fontWeight="400" fontSize="18px">
+              <Flex >
+                <Text mt='10px' fontWeight="300" fontSize="15px">
                   We have emergency ambulance, emergency oxygen, emergency
                   medical supply service
                 </Text>
               </Flex>
-              <Flex justifyContent="center" alignItems="center">
-                <Text>Contact- </Text>
-                <Text fontWeight="700" fontSize="26px">
-                  "+880-1638-418833"
+              <Flex alignItems='center' mt={10}>
+                <Text>Contact </Text>
+                <Text pl='15px' fontWeight="700" fontSize="26px">
+                  +880-1638-418833
                 </Text>
               </Flex>
               <Flex justifyContent="center" alignItems="center">
-                <Text fontWeight="600" fontSize="18px" marginTop="30px">
-                  Or
-                </Text>
-              </Flex>
-              <Flex justifyContent="center" alignItems="center">
-                <Button
-                  colorScheme="teal"
-                  variant="outline"
-                  color=""
-                  fontSize="16    px"
-                  fontWeight="600"
-                  fontFamily="Asap"
-                  width="213px"
-                  height="44px"
-                >
-                  Explore
-                </Button>
               </Flex>
             </SimpleGrid>
+          </Flex>
+          <Flex mt={10} justifyContent="center" alignItems="center">
+            <Button
+              colorScheme="teal"
+              variant="outline"
+              color=""
+              fontSize="16px"
+              fontWeight="600"
+              fontFamily="Asap"
+              width="213px"
+              height="44px"
+            >
+              Emergency Service
+            </Button>
           </Flex>
         </Box>
       </Box>

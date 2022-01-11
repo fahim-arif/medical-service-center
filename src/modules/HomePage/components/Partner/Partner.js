@@ -9,13 +9,13 @@ const Partner = () => {
       <Box marginTop="120px">
         <Flex justifyContent="center">
           <Text fontSize="48px" fontFamily="Asap" fontWeight="600">
-           Partners who support us
+            Partners who support us
           </Text>
         </Flex>
         <Flex justifyContent="center">
           <Text fontSize="18px" fontFamily="Asap" fontWeight="600">
-          Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates 
-          incidunt molestias <br /> <Text align="center">nostrum laudantium. Maiores porro cumque quaerat.</Text>
+            Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates
+            incidunt molestias <br /> <Text align="center">nostrum laudantium. Maiores porro cumque quaerat.</Text>
           </Text>
         </Flex>
       </Box>
@@ -23,7 +23,7 @@ const Partner = () => {
         <SimpleGrid columns={5} spacingX="20px" marginTop="66px">
           {partnerData.map((partner) => (
             <Box width="224px" height="68px" key={partner.id}>
-              <Image src={partner.image} width="224px" height="68px"></Image>
+              <Image objectFit='contain' src={partner.image} width="224px" height="68px"></Image>
             </Box>
           ))}
         </SimpleGrid>

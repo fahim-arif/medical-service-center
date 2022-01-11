@@ -8,6 +8,7 @@ import Image from "next/image";
 const FindDoctor = () => {
   return (
     <Flex
+    background='#F8F9FA'
       justifyContent="space-evenly"
       alignItems="center"
       width="100%"

@@ -1,18 +1,33 @@
+import {useEffect, useState} from 'react';
+import Link from 'next/link';
 import {bestSeller} from './bestellerData';
 import Image from 'next/image';
 import {Box, Flex, Text, SimpleGrid} from '@chakra-ui/react';
 import ReactStars from 'react-rating-stars-component';
-import Rating from 'react-rating';
+import axios from 'axios';
+import Rating from '@root/common/components/elements/Rating/Rating';
 
 const BestSeller = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchStore = async () => {
+      const {data} = await axios.get('http://localhost:5000/api/store');
+      setData(data);
+    }
+    fetchStore();
+  }, [])
+
+  console.log(data);
+
   const bestSellerData = bestSeller;
-  console.log(bestSellerData);
   return (
-    <Box>
-      <Box marginTop="166px">
+    <Box py={10} my='100px' background='#F8F9FA'>
+      <Box mt='100px'>
         <Flex justifyContent="center">
           <Text fontSize="48px" fontFamily="Asap" fontWeight="600">
-            Best Seller
+            Our Medical Store
           </Text>
         </Flex>
         <Flex justifyContent="center">
@@ -29,41 +44,30 @@ const BestSeller = () => {
         width="85%"
         mx="auto"
         marginTop="66px"
+        pb={20}
       >
-        {bestSellerData.map((data) => (
-          <Box key={data.id}>
-            <Image src={data.image} width="260px" height="226px"></Image>
-            <Box>
-              <Flex>
-                <Text>{data.name}</Text>
-              </Flex>
-              <Flex>
-                <ReactStars
-                  count={5}
-                  initialRating={4}
-                  size={20}
-                  isHalf={true}
-                  emptyIcon={<i className="far fa-star"></i>}
-                  halfIcon={<i className="fa fa-star-half-alt"></i>}
-                  fullIcon={<i className="fa fa-star"></i>}
-                  activeColor="#ffd700"
-                  readOnly
-                />
-                <Rating
-                  initialRating={data.rating}
-                  emptySymbol="far fa-star"
-                  fullSymbol="fas fa-star"
-                  readonly
-                ></Rating>
-                ({data.totalRating})
-              </Flex>
+        {data.map((data) => (
+          <Box fontFamily='asap' key={data.id}>
+            <Link href={`/store/${data._id}`}>
+              <a>
+                <Box minW='260px' minH='226px'>
 
-              <Flex>
-                <Text>{data.price}</Text>
-                
-                
-              </Flex>
-            </Box>
+                  <Image src={data.image} width="260px" height="226px"></Image>
+                </Box>
+                <Box mt='-10px' height='130px' width="260px" border='1px solid #dbdbdb'>
+                  <Flex width="260px" p='10px' >
+                    <Text>{data.name}</Text>
+                  </Flex>
+                  <Flex px='10px'>
+                    <Rating text={data.review} rating={data.rating}>
+                    </Rating>
+                  </Flex>
+                  <Flex pt='10px' justifyContent='end'>
+                    <Text fontSize='14px' px='10px'> {data.description}</Text>
+                  </Flex>
+                </Box>
+              </a>
+            </Link>
           </Box>
         ))}
       </SimpleGrid>

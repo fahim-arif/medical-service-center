@@ -17,10 +17,10 @@ const SpecialistDoctor = ({posts}) => {
   console.log(jsonData);
 
   return (
-    <Box>
-      <Box marginTop="166px">
+    <Box py='166px' background='#F8F9FA'>
+      <Box background='#F8F9FA'>
         <Flex justifyContent="center">
-          <Text fontSize="48px" fontFamily="Asap" fontWeight="600">Meet Our Specialist</Text>
+          <Text background='#F8F9FA' fontSize="48px" fontFamily="Asap" fontWeight="600">Meet Our Specialist</Text>
         </Flex>
         <Flex justifyContent="center">
           <Text fontSize="18px" fontFamily="Asap" fontWeight="600">The hospital plays a statewide role in rehabilitation services, which includes the Acquired</Text>

@@ -1,6 +1,6 @@
 
 import type {AppProps} from 'next/app';
-import '@public/styles/globals.css';
+import '../../styles/bootstrap.min.css';
 import {ChakraProvider, CSSReset} from '@chakra-ui/react';
 import theme from '@root/common/theme';
 import '@fontsource/asap';

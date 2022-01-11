@@ -4,7 +4,7 @@ import Progress from './Progress';
 
 export default () => {
   return (
-    <Flex justifyContent="center" alignItems="center">
+    <Flex background='#F8F9FA' justifyContent="center" alignItems="center">
       <Flex
         background="rgba(34, 58, 102, 0.9)"
         height="202px"
