@@ -8,7 +8,8 @@ const Footer = () => {
         <GridItem colSpan={2}>
           <Box width="60%" mx="auto">
             <Box width="188px" height="48px">
-              <Image src={logo} ></Image>
+              {/* <Image src={logo} ></Image> */}
+              
             </Box>
             <Text marginTop="35px">
               Tempora dolorem voluptatum nam vero assumenda voluptate, facilis
