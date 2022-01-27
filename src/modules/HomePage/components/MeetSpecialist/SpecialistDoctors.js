@@ -3,18 +3,23 @@ import {doctorData} from './data';
 import {getDoctors} from '../../services/doctor.service';
 import Image from 'next/image';
 import {Box, Flex, SimpleGrid, Text} from '@chakra-ui/react';
+import axios from 'axios';
+import Link from 'next/link'
 
 const SpecialistDoctor = ({posts}) => {
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await getDoctors();
-  //     // setState
-  //   } ;
-  // }, []);
+  const [doctorData, setDoctorData] = useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/doctor`);
+      setDoctorData(data)
+      // setState
+    };
+    fetchData()
+  }, []);
 
   // console.log(doctorData);
-  const jsonData = doctorData;
-  console.log(jsonData);
+  // const jsonData = doctorData;
+  console.log(doctorData);
 
   return (
     <Box py='166px' background='#F8F9FA'>
@@ -27,9 +32,13 @@ const SpecialistDoctor = ({posts}) => {
         </Flex>
       </Box>
       <SimpleGrid columns={4} spacingX="84px" spacingY="20px" width="85%" mx="auto" marginTop="66px">
-        {jsonData.map((data) => (
+        {doctorData.map((data) => (
           <Box key={data.id}>
-            <Image src={data.image} width="260px" height="226px"></Image>
+            <Link href={`/doctor/${data.id}`}>
+              <a>
+                <Image objectFit='cover' src={data.image} width="260px" height="226px"></Image>
+              </a>
+            </Link>
             <Box>
               <Flex justifyContent="center">
                 <Text>{data.name}</Text>
@@ -41,6 +50,7 @@ const SpecialistDoctor = ({posts}) => {
           </Box>
         ))}
       </SimpleGrid>
+      
     </Box>
   );
 };

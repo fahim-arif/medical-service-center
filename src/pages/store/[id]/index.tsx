@@ -12,7 +12,7 @@ function index() {
     const fetchMedicine = async () => {
       if (id) {
         const {data} = await axios.get(
-          `http://localhost:5000/api/medicine/store/${id}`
+          `http://localhost:5000/api/medicine/shop/${id}`
         );
         setMedicine(data);
       }

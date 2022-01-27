@@ -12,10 +12,37 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import {useState, useEffect} from 'react';
 
 import {useDisclosure} from '@chakra-ui/react';
-export default function AppoinmentTime() {
+export default function AppoinmentTime({doctor}) {
+  const router = useRouter()
   const {isOpen, onOpen, onClose} = useDisclosure();
+  const [time, setTime] = useState('');
+
+  useEffect(() => {
+    setTime(doctor.visitTime);
+  }, [])
+
+  let first = time.split('-')[0]
+  let last = time.split('-')[1]
+  let firstAM = first.split('AM')
+  let duration = 0;
+  console.log(firstAM)
+  if (firstAM.length === 2) {
+    // second half + 12 
+    let lastTemp = +last.split('PM')[0] + 12;
+    duration = Math.abs(+firstAM[0] - lastTemp)
+    console.log(duration)
+  } else {
+
+  }
+
+  const onSubmit = () => {
+    router.push('/video-call');
+    // router.push('/checkout-login')
+  }
 
   return (
     <Box width="60%" mx="auto">
@@ -117,7 +144,8 @@ export default function AppoinmentTime() {
             colorScheme="teal"
             bg="#504DE5"
             size="lg"
-            onClick={onOpen}
+            onClick={() => onSubmit()}
+            // onClick={onOpen}
           >
             Confirm
           </Button>

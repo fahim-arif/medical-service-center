@@ -9,11 +9,11 @@ const AppoinmentDate = () => {
     <Flex justifyContent="center">
       <Box>
         <Text fontSize="20px" fontFamily="Asap" fontWeight="600">Pick Up A Date</Text>
-        <Calendar
+        {/* <Calendar
           value={selectedDay}
           onChange={setSelectedDay}
           shouldHighlightWeekends
-        />
+        /> */}
       </Box>
     </Flex>
   );

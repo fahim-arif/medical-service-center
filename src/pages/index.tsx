@@ -14,11 +14,12 @@ import PatientReview from "../modules/HomePage/components/PaitentReview"
 import Partner from "../modules/HomePage/components/Partner"
 import Footer from "../modules/HomePage/components/Footer";
 
+
 export default function Home() {
   return (
     <Box>
       <Head>
-        <title> Cuet Medical</title>
+        <title> Medical Health Center</title>
       </Head>
       <Header />
       <NavBar />
